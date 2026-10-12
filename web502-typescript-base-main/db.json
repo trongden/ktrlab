@@ -1,0 +1,45 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "Avengers: Endgame",
+      "director": "Anthony Russo",
+      "year": 2019,
+      "genre": "Action",
+      "duration": 181
+    },
+    {
+      "id": "2",
+      "title": "Interstellar",
+      "director": "Christopher Nolan",
+      "year": 2014,
+      "genre": "Sci-Fi",
+      "duration": 169
+    },
+    {
+      "id": "3",
+      "title": "Inception",
+      "director": "Christopher Nolan",
+      "year": 2010,
+      "genre": "Sci-Fi",
+      "duration": 148
+    },
+    {
+      "id": "4",
+      "title": "The Conjuring",
+      "director": "James Wan",
+      "year": 2013,
+      "genre": "Horror",
+      "duration": 112
+    },
+    {
+      "id": "5",
+      "title": "Fast & Furious 7",
+      "director": "James Wan",
+      "year": 2015,
+      "genre": "Action",
+      "duration": "1372",
+      "gerne": "1"
+    }
+  ]
+}
