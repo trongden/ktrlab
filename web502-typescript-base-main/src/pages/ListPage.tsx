@@ -23,6 +23,15 @@ function ListPage() {
 
   const navigate = useNavigate();
 
+  // Kiểm tra trạng thái đăng nhập
+  const isLoggedIn = !!localStorage.getItem("accessToken");
+
+  const handleLogout = () => {
+  localStorage.removeItem("accessToken");
+  localStorage.removeItem("user");
+
+  window.location.href = "/";
+};
   // === CÂU 1, CÂU 4 & CÂU 5: Hàm gọi API lấy danh sách, áp dụng Tìm kiếm (?title_like=) và Sắp xếp (?_sort=&_order=) ===
   function getMovies(search = "", sort = sortBy, order = sortOrder) {
     let url = `http://localhost:3000/movies?_sort=${sort}&_order=${order}`;
@@ -50,6 +59,30 @@ function ListPage() {
   return (
     <div className="p-6 max-w-6xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+        {/* Hiển thị nút theo trạng thái đăng nhập */}
+        {isLoggedIn ? (
+          <button
+            onClick={handleLogout}
+            className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition w-fit font-medium"
+          >
+            Đăng xuất
+          </button>
+        ) : (
+          <div className="flex gap-2">
+            <button
+              onClick={() => navigate("/register")}
+              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition w-fit font-medium"
+            >
+              Đăng ký
+            </button>
+            <button
+              onClick={() => navigate("/login")}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition w-fit font-medium"
+            >
+              Đăng nhập
+            </button>
+          </div>
+        )}
         <h1 className="text-2xl font-semibold">Danh sách phim</h1>
         <button
           onClick={() => navigate("/add")}

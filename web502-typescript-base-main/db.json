@@ -41,5 +41,19 @@
       "duration": "1372",
       "gerne": "1"
     }
+  ],
+  "users": [
+    {
+      "email": "tronga@gmail.com",
+      "password": "$2a$10$LynEElJ66sixZKoWPKrEy.PEZcvR7xu4hpFpmh6cWV4rHwqJGRQta",
+      "username": "Nguyễn Đạt Trọng",
+      "id": 1
+    },
+    {
+      "email": "a@gmail.com",
+      "password": "$2a$10$LV3dh2Jb3KsPAn/FiIDc6uag2seuypkWEdL0Lz7iwHikALDOQFlwm",
+      "username": "Nguyễn Đạt Trọng",
+      "id": 2
+    }
   ]
 }
